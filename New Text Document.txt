@@ -1,0 +1,120 @@
+The LanLauncher was written from the ground up to server one purpose: LAN parties. I've already been to three different LAN parties where the people do not want to edit an INI file or care to understand what an IP address really is, they just want action!
+
+FAQ
+[spoiler][b]How do I make my own LAN server?[/b]
+Simple, just download this tool here: http://alteriw.net/viewtopic.php?f=35&t=1907 and follow directions to compile your own server (It's really simple, I promise!) and place it in the MW2 folder with the LanLauncher. Start the LanLauncher and click Settings, then click 'Start IWnet Server' and it will be started minimized and in the Chat you will see "<your name> has started a server" and so will everyone else using the LanLauncher.
+
+[b]It's not working/Crashes/Errors[/b]
+If you're using Windows 7, please try running the LanLauncher as an Administrator and see if the problem persists.
+If not, please post your issue and I'll try to help or fix it!
+
+[b]Where to get client from?[/b]
+Download the entire MW2 client from [url=http://alteriw.net/viewtopic.php?f=3&t=24]Here[/url], drop in the LanLauncher and play on LAN!
+
+[b]Playing without any Internet?[/b] or [b]Fetching Playlist..[/b]
+1) Make sure you've got the most recent version of the IWNetServer.exe!
+2) Create a directory called "pc" where IWNetServer.exe is.
+3) Download http://server.alteriw.net:13000/pc/mp_playlists.ff and put it in the new "pc" folder.
+4) Start the server and have everyone connect, it should download the playlist and everything should be Tits Mcgee.
+
+Old/Outdated:
+[b]"Connecting to IWnet.."[/b]
+Warning! This will break the current updated aIW client if used! This is only for archival purposes, so don't use it if you aren't sure what you're doing!
+[size=1]It's been pointed out that MW2 does not work entirely offline without some extra patching!
+If you want to play entirely [i][b]OFFLINE, with no internet connection at all[/b][/i], you'll need to patch your client.
+Luckily, you can do so with ([url=http://www.virustotal.com/analisis/024c206bb505d88826c605e7e353307598fc72a003277493616ae34e223541a7-1280758841]VirusTotal[/url]) - [url=http://dl.dropbox.com/u/4275989/Patcher/v1.3.37a/MW2%20Patcher.zip]this application, the originally named "Lan Patcher"[/url][/size].
+
+You can run it from anywhere, but it will ask you to find  iw4mp.exe if it doesn't find it in the same folder. If you have the v1.3.37a MW2 client, it will say everything matches and you can click "Patch" at the bottom, and once it's finished you should be able to play without any internet connection at all. If you want to revert it at any time just run it again and the "Patch" button will be changed to "Unpatch" and revert the changes. It will then verify the CRC of the EXE and it will match the unpatched version's CRC!
+[size=50]Thanks to BabyCarlos for pointing out that MW2 doesn't work without an internet connection![/size]
+
+[b]Will this work with Steam? [/b]
+I'm not sure, I don't have it to test. I can tell you that if you are able to connect to and play on the official server.alteriw.net, you should be able to use the LanLauncher. (If you're unsure, check the next FAQ item for the full client and then just drop in the LanLauncher and distribute the MW2 files and tell everyone to start it up!)
+
+[b]What does it do, exactly?[/b]
+When all players run this it will send out a broadcast UDP packet and every other player running this (and allowing it through their firewall) will be added to the list of discovered players. Each individual user's LanLauncher will check if its host's computer is running an IWNetServer and if one is found it broadcasts that it has a server running, and each user will see the IP address in the list with the text "Shared IP:" next to it. If users have the 'Auto-select server' box checked, the IP address/hostname will be set as the default server and LanLauncher will attempt to ping it. Any time a valid server is pinged from a user's LanLauncher it will be broadcast to all users and be listed as a "Shared IP."[/spoiler]
+
+[size=150][b]For security and privacy reasons, the LanLauncher will NEVER connect to the internet unless you either: A)Enable the update-checking feature or B)Enter a non-local, internet IP address to check the status of.[/b][/size]
+It will never download updates automatically, it simply lets you know where to get the most recent version if it is newer.
+
+
+[b]Quick features[/b]:
+[list]
+[*]Serverless design
+[*]Simple chat
+[*]Supports 50+ users on one LAN
+[*]Connect to a user's lobby
+[*]Show Usernames/IP Addresses in easy list
+[*]Output list of Users and IP Addresses (Use /list in chat)
+[*][b]Simple[/b] name changer/colorizer
+[*]Server Status checking[/list]
+
+[b]Screens[/b]:
+[img]http://dl.dropbox.com/u/4275989/LL/1.0.128/1.gif[/img]
+
+[b]Downloads[/b]:
+
+Simply place LanLauncher.exe, MSWINSCK.OCX, and LANConnecter.exe (and the iwnetserver.exe, if you intend to use it) into your MW2 folder (The folder with iw4mp.exe/iw4mp.dat).
+
+Latest: 1.0.128
+([url=http://www.virustotal.com/analisis/09a1efddddfac251479b95f110f8a4ed360bb2597a7f8d3772d30d021b67f369-1286505402]VirusTotal[/url]) - [url=http://dl.dropbox.com/u/4275989/LL/1.0.128/LanLauncher.zip]LanLauncher 1.0.126[/url]
+
+Changelog
+[spoiler][quote]
+1.0.128
+Nickname editor updated to show example with colors!
+Now asks if you want to connect to the server if it is offline.
+Automatically checks if server is online every few seconds if detected offline, no need to retype the IP or host again and no recheck button will be added.
+Small fixes behind the scenes (Nickname editor update was live for early Updaters as 1.0.127!)
+
+1.0.126
+(This version was out for several days via the update checking feature :D)
+Maintenance update for the LanLauncher and LanConnecter.
+Added: Ignore option for the current update incase you don't want to be bugged by the window each time, but it will remind you again if another version is released!
+Fixed: Sometimes it would fail to close if MW2 wasn't found or failed to start. 
+New features for LanConnecter: Option to replace the aiw:// protocol (Much faster at connecting to servers!)
+Minor fixes to the user list's right-click menu. 
+New icons!
+
+1.0.125
+Ability to connect to lobbies without any internet connecting directly from LanLauncher!
+New protocol for connecting to servers that doesn't use the aIW auto-updater, simply use lan://connect/IP:Port instead of the official aiw://connect/IP:Port.
+(^ This is thanks to the most recent update from aIW, code and concept originally by NTAuthority. Source available on request!)
+Right-click menu added to the user list, displays options for connecting to Users and Servers.
+Other small fixes.
+
+1.0.123
+First time you start it you will be asked if you would like to check for updates. (It does NOT download any updates, just provides you with a link to the new update.)
+Fixed some of the text colors for XP users with dark/unique themes.
+Option to start the game with the aIW Updater, old versions always bypassed it.
+I dropped the pixellated circle that showed the server status. New way to tell is much more obvious ;D
+
+1.0.120
+Works with new version 1.3.37a.
+New buttons. Settings button is easier to push, it grows now.
+Fixed chat freeze after 65,535 character limit.
+Fixed the Auto-Select not considering Shared IPs (Broken from .99 =x)
+Better user and list handling allowing the new commands.
+Internal version checking, no internet required! ([i]Each client reports it's version to everyone and if one person has a newer version, everyone with an old version will get a message telling them there is a new version and showing this link in the chat: [url]http://dl.dropbox.com/u/4275989/LAN.html[/url][/i])
+Few new small commands. Type /help in chat for the list.
+/clear - Clears Offline users from the list
+/clear2 - Clears Shared IPs from the list.
+/list replaced with /version, both still work.
+/reset - Resets ports, you'll know when to use this because you will get an error about it.
+
+1.0.100
+Finally a fix for error '10065 - No route to host'!
+
+1.0.99
+Rewrote how IPs/Names are handled
+Added ability to show Names AND IPs in the List
+Added a time-out feature for when clients go offline without notice
+Changed how "Shared" Server address are displayed: They now say "Shared IP"
+Corrected a small bug with the IP Auto-chooser for non-32bit IP addresses
+Reduced server status checking delay
+
+1.0.88
+Looks better in XP now (Previously showed extra blank space on the right side of the window)
+New text bar that acts like the title bar
+/cls command fixed  :oops: 
+Problem with window size if moved while settings were being shown fixed, no more of that lame sliding effect.
+[/quote][/spoiler]
